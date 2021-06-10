@@ -20,16 +20,14 @@ const restaurantSchema = new Schema({
       image_url: {
         type: String
       },
-      User: {
-        type: Schema.Types.ObjectId,
-        required: true,
+      users:[{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-      },
-      Blog: {
-        type: Schema.Types.ObjectId,
-        required: true,
+      }],
+      blogs: [{
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Blog'
-      }
+      }],
     });
 
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);

@@ -46,3 +46,5 @@ Notes:
 | POST | /api/users/signup | users.js | Signup data |
 | GET | /api/users/profile | users.js | Profile data |
 | GET | /api/users/all-users | users.js | Get all users |
+
+

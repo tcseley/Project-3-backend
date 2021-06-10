@@ -16,6 +16,11 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
+    restaurant: {
+        type: Schema.Types.ObjectId,
+        ref: 'Restaurant'
+    },
+
     timesLoggedIn: {
         type: Number,
         default: 0

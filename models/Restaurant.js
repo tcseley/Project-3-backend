@@ -22,12 +22,10 @@ const restaurantSchema = new Schema({
       },
       User: {
         type: Schema.Types.ObjectId,
-        required: true,
         ref: 'User'
       },
       blog: {
         type: Schema.Types.ObjectId,
-        required: true,
         ref: 'Blog'
       }
     });

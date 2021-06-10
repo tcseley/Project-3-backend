@@ -24,12 +24,12 @@ const Janeth = {
 User.findById('60c15774b527025960ef0238', (err, user) => {
     console.log(user);
     //find Restaurant 
-Restaurant.findOne({ _id: '60c1645b8be3345ecdd75f99'}, (err, restaurant) => {
-    console.log(restaurant);
-    user.restaurant.push({restaurant});
-    User.save();
-    console.log(User)
-})
+    Restaurant.findOne({ _id: '60c1645b8be3345ecdd75f99'}, (err, restaurant) => {
+        console.log(restaurant);
+        user.restaurants.push(restaurant);
+        user.save();
+        console.log(user)
+    })
 })
 
 // 

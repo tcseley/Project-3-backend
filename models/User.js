@@ -16,10 +16,10 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
-    restaurant: {
-        type: Schema.Types.ObjectId,
+    restaurants:[ {
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Restaurant'
-    },
+    }],
 
     timesLoggedIn: {
         type: Number,

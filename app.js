@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const passport = require('passport');
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 
 // API
 const users = require('./api/users');

@@ -26,7 +26,7 @@ User.findById('60c15774b527025960ef0238', (err, user) => {
     //find Restaurant 
 Restaurant.findOne({ _id: '60c1645b8be3345ecdd75f99'}, (err, restaurant) => {
     console.log(restaurant);
-    user.restaurant.push(restaurant);
+    user.restaurant.push({restaurant});
     User.save();
     console.log(User)
 })
@@ -38,6 +38,7 @@ const fetchOneUser = async (email) => {
     const result = await User.findOne({ email })
     console.log(result);
 }
+
 // fetchOneUser('Janeth@gmail.com')
 
 //remove restaurant by id

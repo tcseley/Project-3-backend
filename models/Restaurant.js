@@ -25,7 +25,7 @@ const restaurantSchema = new Schema({
         required: true,
         ref: 'User'
       },
-      blog: {
+      Blog: {
         type: Schema.Types.ObjectId,
         required: true,
         ref: 'Blog'

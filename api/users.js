@@ -119,7 +119,7 @@ const profile = async (req,res) => {
 router.get('/test', test);
 
 // POST api/users/register (Public)
- router.post('/signup', signup);
+router.post('/signup', signup);
 
 // POST => api/users/signup (Public)
 router.post('/login', login);

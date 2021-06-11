@@ -1,19 +1,15 @@
 const mongoose = require('mongoose');
-const Comment = require('./Comment')
-
+const Comment = require('./Comment');
 
 const { Schema } = mongoose;
 
 const restaurantSchema = new Schema({
-    name: {
+      name: {
         type: String
       },
       location: {
         type: String
       },
-      review: [{
-        type: String
-      }],
       price: {
         type: Number
       },
@@ -23,12 +19,13 @@ const restaurantSchema = new Schema({
       image_url: {
         type: String
       },
-      users:[{
+      users:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-      }],
-      comments: [Comment.schema],
+      },
+      comments: [Comment.schema]
     });
 
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
+
 module.exports = Restaurant;

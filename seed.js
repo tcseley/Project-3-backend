@@ -1,6 +1,7 @@
 // // import all models
 // const { Restaurant, User, Blog } = require('./models');
 
+//-----------------------------------------------------------
 
 // //create a test user
 
@@ -121,7 +122,3 @@ Book.create([
 
 
 
-//create test user
-//use userId to pass in to restaurant
-//Blog ids
-// then find populate reference under mongoose lesson 

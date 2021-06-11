@@ -9,13 +9,13 @@ const { Restaurant } = require('../models');
 
 //controllers
 const index = async (req, res) => {
-    console.log('inside of /api/restaurant');
+    console.log('inside of /api/restaurants');
     try {
         const allRestaurants = await Restaurant.find({});
         
-        res.json({ restaurant: allRestaurants });
+        res.json({ restaurants: allRestaurants });
     } catch (error) {
-        console.log('Error inside of /api/restaurant');
+        console.log('Error inside of /api/restaurants');
         console.log(error);
         return res.status(400).json({ message: 'Restaurants not found... Please try again.' });
     }

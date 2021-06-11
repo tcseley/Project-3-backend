@@ -4,11 +4,9 @@ const { Schema } = mongoose;
 const eventSchema = new Schema({
   name: {
     type: String,
-    required: true,
   },
   location: {
     type: String,
-    required: true,
   },
 });
 

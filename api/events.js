@@ -84,18 +84,18 @@ const deleteEvent = async (req, res) => {
 
 // GET api/books/test (Public)
 router.get('/test', (req, res) => {
-    res.json({ msg: 'Books endpoint OK!'});
+    res.json({ msg: 'Events endpoint OK!'});
 });
 
 // GET -> /api/books/
-router.get('/', index); 
+router.get('/', passport.authenticate('jwt', { session: false }), index); 
 // GET -> /api/books/:id
-router.get('/:id', show);
+router.get('/:id', passport.authenticate('jwt', { session: false }), show);
 // POST -> /api/books
 router.post('/', passport.authenticate('jwt', { session: false }), create);
 // PUT -> /api/books
 router.put('/', passport.authenticate('jwt', { session: false }), update);
 // DELETE => /api/books/:id
-router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteBook);
+router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteEvent);
 
 module.exports = router;

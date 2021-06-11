@@ -96,6 +96,6 @@ router.post('/', passport.authenticate('jwt', { session: false }), create);
 // PUT -> /api/hotels
 router.put('/', passport.authenticate('jwt', { session: false }), update);
 // DELETE => /api/hotels/:id
-router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteBook);
+router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteHotel);
 
 module.exports = router;

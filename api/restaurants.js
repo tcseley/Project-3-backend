@@ -21,7 +21,13 @@ const index = async (req, res) => {
     }
 }
 
+
+
+router.get('/test', (req, res) => {
+    res.json({ msg: 'Restaurant endpoint OK!'});
+});
 // GET -> /api/restaurants/
 router.get('/', index);
+
 
 module.exports = router; 

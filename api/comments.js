@@ -98,6 +98,6 @@ router.post('/', passport.authenticate('jwt', { session: false }), create);
 // PUT -> /api/blog
 router.put('/', passport.authenticate('jwt', { session: false }), update);
 // DELETE => /api/blog/:id
-router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteBook);
+router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteComment);
 
 module.exports = router;

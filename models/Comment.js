@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const blogSchema = new Schema({
+const commentSchema = new Schema({
   title: {
     type: String,
   },
@@ -11,7 +11,13 @@ const blogSchema = new Schema({
   date: {
     type: Date,
     default: Date.now()
-  }
+  },
+  users:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  
 });
 const Comment = mongoose.model("Comment", commentSchema);
+
 module.exports = Comment;

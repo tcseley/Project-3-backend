@@ -16,11 +16,6 @@ const userSchema = new Schema({
         required: true,
         minlength: 8
     },
-    restaurants:[ {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Restaurant'
-    }],
-
     timesLoggedIn: {
         type: Number,
         default: 0

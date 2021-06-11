@@ -33,5 +33,4 @@ module.exports = {
     Event,
     Comment,
     Restaurant,
-    
 }

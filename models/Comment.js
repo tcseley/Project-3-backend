@@ -13,5 +13,5 @@ const blogSchema = new Schema({
     default: Date.now()
   }
 });
-const Blog = mongoose.model("Blog", blogSchema);
-module.exports = Blog;
+const Comment = mongoose.model("Comment", commentSchema);
+module.exports = Comment;

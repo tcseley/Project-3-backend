@@ -4,11 +4,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const passport = require('passport');
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8002;
 
 // API
 const users = require('./api/users');
 const books = require('./api/books');
+const restaurants = require('./api/restaurant')
 
 // Middleware
 app.use(cors());
@@ -28,10 +29,12 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/users', users);
 app.use('/api/books', books);
+app.use('/api/restaurants', restaurants);
 
 app.get('/*', (req, res) => {
     res.status(404).json({ message: 'Data not found' });
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server is listening 🎧 on port: ${PORT}`);

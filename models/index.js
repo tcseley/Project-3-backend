@@ -25,6 +25,7 @@ const Book = require('./Book');
 const Restaurant = require('./Restaurant')
 const Comment = require('./Comment')
 const Attraction = require('./Attraction')
+const Favorite = require('./Favorite')
 
 //export all models from this file
 module.exports = {
@@ -33,4 +34,5 @@ module.exports = {
     Attraction,
     Comment,
     Restaurant,
+    Favorite
 }

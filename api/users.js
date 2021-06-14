@@ -136,6 +136,9 @@ router.get(
   "/profile",
   passport.authenticate("jwt", { session: false }),
   profile
+
+  
+
 );
 // router.get('/all-users', fetchUsers);
 

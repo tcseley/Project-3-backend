@@ -52,6 +52,7 @@ const create = async (req, res) => {
 const update = async (req, res) => {
     console.log(req.body);
     try {
+        console.log('We are inside the try block');
         // const book = await Book.findOne({ title: req.body.title });
         // console.log(book);
 

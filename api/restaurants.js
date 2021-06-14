@@ -100,26 +100,12 @@ router.get('/:id', show);
 // router.get('/:name', passport.authenticate('jwt', { session: false }), show);
 // POST -> /api/restaurant
 router.post('/', create);
-
 // router.post('/', passport.authenticate('jwt', { session: false }), create);
 // PUT -> /api/restaurant
-
 router.put('/', update);
-
 // router.put('/', passport.authenticate('jwt', { session: false }), update);
 // DELETE => /api/restaurant/:id
 router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteRestaurant);
-
-
-
-
-
-
-///
-
-
-
-
 
 // GET -> /api/restaurants/
 router.get('/', index); 

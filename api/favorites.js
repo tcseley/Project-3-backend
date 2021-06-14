@@ -35,11 +35,12 @@ const show = async (req, res) => {
     }
 }
 
+
 const create = async (req, res) => {
-    const { name, location, price, reveiws } = req.body;
+    const { businessId, userId, businessType, name } = req.body;
 
     try {
-        const newfavorite = await favorite.create({ businessId, userId, businessType })
+        const newfavorite = await Favorite.create({ businessId, userId, businessType, name})
         console.log('new favorite created', newfavorite);
         res.json({ favorite: newfavorite });
     } catch (error) {
@@ -48,6 +49,7 @@ const create = async (req, res) => {
        return res.status(400).json({ message: 'favorite was not created. Please try again...' }); 
     }
 }
+
 
 const update = async (req, res) => {
     console.log(req.body);

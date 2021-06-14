@@ -111,16 +111,6 @@ router.put('/', update);
 router.delete('/:id', passport.authenticate('jwt', { session: false }), deleteRestaurant);
 
 
-
-
-
-
-///
-
-
-
-
-
 // GET -> /api/restaurants/
 router.get('/', index); 
 

@@ -64,7 +64,7 @@ const update = async (req, res) => {
         // // save the new book info
         // const savedBook = await book.save();
 
-        const updatedBook = await Book.update({ title: req.body.title }, req.body); // updating the book
+        const updatedBook = await Book.updateOne({ title: req.body.title }, req.body); // updating the book
         const book = await Book.findOne({ title: req.body.title });
 
         console.log(updatedBook); // { n: 1, nModified: 0, ok: 1 }

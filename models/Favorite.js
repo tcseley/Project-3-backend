@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 const favoriteSchema = new Schema({
     businessId:{
         type: String,
-        required: true
     },
     userId:{
         type: mongoose.Schema.Types.ObjectId,
@@ -13,7 +12,9 @@ const favoriteSchema = new Schema({
     },
     businessType:{
         type: String,
-        required: true
+    },
+    name: {
+        type: String
     }
 })
 

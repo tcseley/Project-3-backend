@@ -11,7 +11,7 @@ const users = require("./api/users");
 const books = require("./api/books");
 const restaurants = require("./api/restaurants");
 const comments = require("./api/comments");
-const events = require("./api/events");
+const attractions = require("./api/attractions");
 const hotels = require("./api/hotels");
 
 // Middleware
@@ -36,7 +36,7 @@ app.use("/api/books", books);
 app.use("/api/restaurants", restaurants);
 app.use("/api/hotels", hotels);
 app.use("/api/comments", comments);
-app.use("/api/events", events);
+app.use("/api/attractions", attractions);
 
 app.get("/*", (req, res) => {
   res.status(404).json({ message: "Data not found" });

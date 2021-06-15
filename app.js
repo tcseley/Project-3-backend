@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const passport = require("passport");
-// Commenting out to add production env
 //const PORT = process.env.PORT || 8000;
 
 app.set("port", process.env.PORT || 9000);
@@ -25,9 +24,7 @@ require("./config/passport")(passport);
 
 // Home route
 app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "Smile, you are being watched by the Backend Engineering Team",
-  });
+  res.send("Ooompa Loompa")
 });
 
 // Routes
@@ -39,8 +36,12 @@ app.get("/*", (req, res) => {
 });
 
 
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+  console.log(`http://localhost:${app.get("port")}`)
+});
 // app.listen(PORT, () => {
 //   console.log(`Server is listening 🎧 on port: ${PORT}`);
 // });
-let server = app.listen(app.get("port"));
+//let server = app.listen(app.get("port"));
 

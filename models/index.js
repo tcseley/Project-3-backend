@@ -10,7 +10,6 @@ const mongoose = require('mongoose');
 //     useCreateIndex: true
 // });
     
-const db = mongoose.connect;
 
 // Add this section for production DB env
 let connectionString = "";
@@ -21,12 +20,13 @@ if (process.env.NODE_ENV === "production") {
   connectionString = process.env.MONGO_URI;
 }
 mongoose.connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: true,
-    useCreateIndex: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: true,
+  useCreateIndex: true
 });
 
+const db = mongoose.connection;
 //Set up event for db to print connection
 db.once('open', () => {
     console.log(`Connect to MongoDB at ${db.host}:${db.port}`);

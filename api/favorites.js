@@ -40,7 +40,7 @@ const create = async (req, res) => {
     const { businessId, userId, businessType, name } = req.body;
 
     try {
-        const newfavorite = await Favorite.create({ businessId, userId, businessType, name})
+        const newfavorite = await Favorite.create({ businessId, userId, businessType, name })
         console.log('new favorite created', newfavorite);
         res.json({ favorite: newfavorite });
     } catch (error) {
@@ -68,6 +68,7 @@ const update = async (req, res) => {
         console.log(error);
         return res.status(400).json({ message: 'favorite could not be updated. Please try again...' });
     }
+
 }
 
 const deleteFavorite = async (req, res) => {

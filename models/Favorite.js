@@ -16,7 +16,7 @@ const favoriteSchema = new Schema({
     name: {
         type: String
     }
-})
+})git add .
 
 const Favorite = mongoose.model('Favorite', favoriteSchema);
 module.exports = Favorite;

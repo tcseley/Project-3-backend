@@ -40,8 +40,3 @@ app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
   console.log(`http://localhost:${app.get("port")}`)
 });
-// app.listen(PORT, () => {
-//   console.log(`Server is listening 🎧 on port: ${PORT}`);
-// });
-//let server = app.listen(app.get("port"));
-

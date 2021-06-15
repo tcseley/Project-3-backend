@@ -4,7 +4,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const passport = require("passport");
-const PORT = process.env.PORT || 8000;
+// Commenting out to add production env
+//const PORT = process.env.PORT || 8000;
+
+app.set("port", process.env.PORT || 9000);
+
 
 // API
 const users = require("./api/users");
@@ -35,6 +39,8 @@ app.get("/*", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-  console.log(`Server is listening 🎧 on port: ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is listening 🎧 on port: ${PORT}`);
+// });
+let server = app.listen(app.get("port"));
+

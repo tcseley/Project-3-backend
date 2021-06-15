@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 //     useCreateIndex: true
 // });
     
-//const db = mongoose.connect;
+const db = mongoose.connect;
 
 // Add this section for production DB env
 let connectionString = "";
